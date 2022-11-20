@@ -1,0 +1,75 @@
+div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* button 1 */
+.wrapperbtn a {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    position: relative;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    outline: 2px solid red;
+}
+
+.wrapperbtn a span {
+    position: relative;
+    z-index: 2;
+    color: #000;
+}
+
+.wrapperbtn a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #ff003b;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.wrapperbtn a:hover:after {
+    width: 100%;
+}
+
+.wrapperbtn a span:hover {
+    color: #fff;
+}
+
+.wrapperbtn a:hover {
+    color: #fff;
+}
+
+/* button 2 */
+.pulse button {
+    background: none;
+    border: 2px solid;
+    font-size: 18px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    outline: 2px solid red;
+    border: none;
+}
+
+.pulse button:hover,
+.pulse button:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #ef8f6e;
+    }
+}
